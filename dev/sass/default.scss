@@ -1,0 +1,89 @@
+.c4d-youtube {
+	margin: auto -5px;
+	&:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+	.item {
+		width: 50%;
+		float: left;
+		.item-inner {
+			margin: 10px 5px;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			a {
+				display: block;
+				position: relative;
+				margin: auto;
+				padding: 0;
+				&:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					margin: auto;
+					background: rgba(#000, 0.3);
+					z-index: 9;
+					opacity: 0;
+					transition: all 0.3s;	
+				}
+				&:before {
+					position: absolute;
+					content: "\f16a";
+					font-family: 'FontAwesome';
+					font-size: 40px;
+					color: #cd201f;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 10;
+					opacity: 0;
+					transition: opacity 0.3s;
+				}
+				&:hover {
+					&:after,
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+	&.owl-carousel {
+		margin: auto;
+		.item {
+			width: 100%;
+			float: none;
+			margin: auto;
+			padding: 0;
+			.item-inner {
+				margin: auto;
+				padding: 0;
+				img {
+					width: 100%;
+					height: auto;
+					margin: auto;
+					padding: 0;
+				}
+			}
+		}
+		.owl-controls .owl-page {
+			span {
+				width: 9px;
+				height: 9px;
+				border-radius: 50%;
+				background: #cfcfcf;
+			}
+			&.active {
+				span {
+					background: #000;
+				}
+			}
+		}
+	}
+}
